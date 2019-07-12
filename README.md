@@ -2,14 +2,14 @@
 Aplicação CRUD utilizando o conceito de REST API, a mesma foi solicitada na 2ª Etapa do Processo Seletivo da Salvus Saúde. A atividade foi feita com Node.js(Javascript) com banco de dados em MongoDB rodando em um servidor da amazon(aws).
 
 Foram usadas as aplicações:
-->Node.js(Javascript)
-->MongoDB Atlas
-->Postman(testes)
+  Node.js(Javascript)
+  MongoDB Atlas
+  Postman(testes)
 
 As dependências necessárias foram:
-->Nodemon
-->Body Parser
-->Debug
+ Nodemon
+ Body Parser
+ Debug
 ->Express
 ->JsonWebToken
 ->MD5    
@@ -17,15 +17,15 @@ As dependências necessárias foram:
 ->Sendgrid
 
 A API conta com as seguintes features(funcionalidades):
-->Cadastro de Paciente 
-->Cadastro de Médico
-->Lista de Pacientes
-->Lista de Médicos
-->Alterar Informações de Paciente via ID
-->Alterar Informações de Médico via ID
-->Criptografia de senhas
-->Serviço de Autenticação
-->Serviço de Envio de Email de Cadastro
+      ->Cadastro de Paciente 
+      ->Cadastro de Médico
+      ->Lista de Pacientes
+      ->Lista de Médicos
+      ->Alterar Informações de Paciente via ID
+      ->Alterar Informações de Médico via ID
+      ->Criptografia de senhas
+      ->Serviço de Autenticação
+      ->Serviço de Envio de Email de Cadastro
 
 Para rodar a Aplicação é necessário os seguintes passos:
 
