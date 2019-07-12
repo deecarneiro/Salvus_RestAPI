@@ -1,0 +1,56 @@
+aside, section
+{
+  padding: 5em;
+  background-color: #41A152;
+  margin: 0;
+}
+.card 
+{
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+}
+#apre
+{
+    background-image: './img/apre.png' 
+}
+
+#medicoCadastro.select
+{
+
+}
+
+.display-3, .display-4
+{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900
+}
+
+.display-3
+{
+    color: #41A152;
+}
+
+.display-4
+{
+    color: #2B6937;
+}
+footer, header{
+    color: #888582;
+    font-family: "Montserrat", sans-serif;
+
+}
+.button{
+    background-color:#2B6937;
+}
+
+.d-inline-block, .align-top
+{
+    height: auto;
+    width: auto;
+}
+
+.navbar
+{
+    background-color:#FFFFFF;
+}
