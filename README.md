@@ -42,10 +42,10 @@ Para rodar a Aplicação é necessário os seguintes passos:
  <li>Após o término da instalação das dependências, executar o comando 'npm start'</li>
 <ol>
 
-Para utilizar as funções de CRUD se faz necessário usar o aplicativo Postman:
-->Ao executar a API, aparece na tela do seu terminal de escolha a <porta> na qual a aplicação está rodando;
- ->As rotas são:
- -Para pacientes:
+Para utilizar as funções de CRUD se faz necessário usar o aplicativo Postman
+<p>Ao executar a API, aparece na tela do seu terminal de escolha a <porta> na qual a aplicação está rodando</p>
+ <span>As rotas são:</span>
+ <span>-Para pacientes:</span>
  <ul>
   <li> CREATE : post: localhost:<porta>/api/patient</li>
   <li> READ : get: localhost:<porta>/api/patient</li>
