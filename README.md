@@ -3,9 +3,11 @@
 <p>A atividade foi feita com Node.js(Javascript) com banco de dados em MongoDB rodando em um servidor da amazon(aws).</p>
 
 Foram usadas as aplicações:
- 1.Node.js(Javascript)
- 2.MongoDB Atlas
- 3.Postman(testes)
+<ul>
+ <li>Node.js(Javascript)</li>
+ <li>MongoDB Atlas</li>
+ <li>Postman(testes)</li>
+</ul>
 
 As dependências necessárias foram:
  <ul>
