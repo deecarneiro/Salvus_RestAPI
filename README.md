@@ -47,20 +47,20 @@ Para utilizar as funções de CRUD se faz necessário usar o aplicativo Postman
  <span>As rotas são:</span>
  <span>-Para pacientes:</span>
  <ul>
-  <li> CREATE : post: localhost:<porta>/api/patient</li>
-  <li> READ : get: localhost:<porta>/api/patient</li>
-  <li> READ:  get: localhost:<porta>/api/patient/:id</li>
-  <li> UPDATE: put: localhost:<porta>/api/patient/:id</li>
-  <li> DELETE: delete: localhost:<porta>/api/patient/:id</li>
-  <li> AUTHENTICATE: post : localhost:<porta>/api/patient/authenticate</li>
+  <li> CREATE : post: localhost:<porta>/api/patients</li>
+  <li> READ : get: localhost:<porta>/api/patients</li>
+  <li> READ:  get: localhost:<porta>/api/patients/:id</li>
+  <li> UPDATE: put: localhost:<porta>/api/patients/:id</li>
+  <li> DELETE: delete: localhost:<porta>/api/patients/:id</li>
+  <li> AUTHENTICATE: post : localhost:<porta>/api/patients/authenticate</li>
  </ul>
 
   -Para médicos:
  <ul>
-  <li>  CREATE : post: localhost:<porta>/api/doctor</li>
-  <li>  READ : get: localhost:<porta>/api/doctor</li>
-  <li>  READ:  get: localhost:<porta>/api/doctor/:id</li>
-  <li>  UPDATE: put: localhost:<porta>/api/doctor/:id</li>
-  <li>  DELETE: delete: localhost:<porta>/api/ doctor/:id</li>
-  <li>  AUTHENTICATE: post : localhost:<porta>/api/doctor/authenticate</li>
+  <li>  CREATE : post: localhost:<porta>/api/doctors</li>
+  <li>  READ : get: localhost:<porta>/api/doctors</li>
+  <li>  READ:  get: localhost:<porta>/api/doctors/:id</li>
+  <li>  UPDATE: put: localhost:<porta>/api/doctors/:id</li>
+  <li>  DELETE: delete: localhost:<porta>/api/doctors/:id</li>
+  <li>  AUTHENTICATE: post : localhost:<porta>/api/doctors/authenticate</li>
 </ul>
