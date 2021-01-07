@@ -4,6 +4,7 @@ const repository = require('../repositories/doctor-repository');
 const md5 = require('md5');
 const authService = require('../services/auth-service');
 const emailService = require('../services/email-service');
+
 exports.get =  async(req, res, next) =>{
     try
     {
@@ -18,11 +19,10 @@ exports.get =  async(req, res, next) =>{
 };
 
 exports.getById = async(req, res, next) =>{
-    try
-    {   var data = repository.getById(req.params.id);
-        res.status(200).send(data);
-    }catch(erro)
-    {
+    try{
+        var data = await repository.getById(req.params.id)
+            res.status(200).send(data);
+    } catch (e){
         res.status(500).send({
             message: 'Falha ao processar sua requisição'
         });
@@ -80,7 +80,7 @@ exports.authenticate = async(req, res, next)=>{
             });
             return;
        }
-       const token = authService.generateToken(
+       const token = await authService.generateToken(
             {email: doctor.email,
              nome: doctor.nome
             }
@@ -89,7 +89,7 @@ exports.authenticate = async(req, res, next)=>{
             token: token ,
             data:{
                 email: doctor.email,
-                nome: doctor.email
+                nome: doctor.nome
             },
             message: 'Autenticação feita com sucesso'
         });
@@ -108,7 +108,7 @@ exports.put  = async(req, res, next) =>{
     {
         await repository.put(req.params.id, req.body);
         res.status(201).send({
-            message: 'Dados do paciente foram atualizados com sucesso'
+            message: 'Dados do médico foram atualizados com sucesso'
         });
     }catch(erro)
     {
@@ -124,7 +124,7 @@ exports.delete = async(req, res, next) => {
     {
         await repository.del(req.params.id);
         res.status(200).send({
-            message: 'Paciente removido com successo com sucesso'
+            message: 'Médico removido com successo com sucesso'
         });
     }catch(erro)
     {
