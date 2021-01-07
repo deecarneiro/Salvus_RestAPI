@@ -49,9 +49,9 @@ Para utilizar as funções de CRUD se faz necessário usar o aplicativo Postman
  <ul>
   <li> CREATE : post: localhost:<porta>/api/patients</li>
   <li> READ : get: localhost:<porta>/api/patients</li>
-  <li> READ:  get: localhost:<porta>/api/patients/:id</li>
-  <li> UPDATE: put: localhost:<porta>/api/patients/:id</li>
-  <li> DELETE: delete: localhost:<porta>/api/patients/:id</li>
+  <li> READ:  get: localhost:<porta>/api/patients/patient/:id</li>
+  <li> UPDATE: put: localhost:<porta>/api/patients/patient/:id</li>
+  <li> DELETE: delete: localhost:<porta>/api/patients/patient/:id</li>
   <li> AUTHENTICATE: post : localhost:<porta>/api/patients/authenticate</li>
  </ul>
 
@@ -59,8 +59,8 @@ Para utilizar as funções de CRUD se faz necessário usar o aplicativo Postman
  <ul>
   <li>  CREATE : post: localhost:<porta>/api/doctors</li>
   <li>  READ : get: localhost:<porta>/api/doctors</li>
-  <li>  READ:  get: localhost:<porta>/api/doctors/:id</li>
-  <li>  UPDATE: put: localhost:<porta>/api/doctors/:id</li>
-  <li>  DELETE: delete: localhost:<porta>/api/doctors/:id</li>
+  <li>  READ:  get: localhost:<porta>/api/doctors/doctor/:id</li>
+  <li>  UPDATE: put: localhost:<porta>/api/doctors/doctor/:id</li>
+  <li>  DELETE: delete: localhost:<porta>/api/doctors/doctor/:id</li>
   <li>  AUTHENTICATE: post : localhost:<porta>/api/doctors/authenticate</li>
 </ul>

@@ -1,7 +1,9 @@
-global.SALT_KEY = "bgJwb15CpSwnmjMHfAAUhtnl2bVZjZJ8";
-global.EMAIL_TMPL = 'Olá, <strong>-body-</strong>, seja bem vindo ao teste da 2ª Etapa da Salvus';
-global.SENDGRID_KEY = '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'
+require('dotenv').config({ path: 'src/.env' })
+
+global.SALT_KEY = process.env.SALT_KEY;
+global.EMAIL_TMPL = process.env.EMAIL_TMPL;
+global.SENDGRID_KEY = process.env.SENDGRID_KEY;
 module.exports = {
-    connectionString: "mongodb+srv://deecarneiro:deecarneiro@nodestr-muayt.mongodb.net/test?retryWrites=true&w=majority",
-    sendgridKey: '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',
+    connectionString: process.env.CONNECTION_STRING,
+    sendgridKey: process.env.SENDGRID_KEY,
 }
