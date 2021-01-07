@@ -3,7 +3,7 @@
 const repository = require('../repositories/doctor-repository');
 const md5 = require('md5');
 const authService = require('../services/auth-service');
-
+const emailService = require('../services/email-service');
 exports.get =  async(req, res, next) =>{
     try
     {
@@ -49,18 +49,18 @@ exports.post = async(req, res, next)=>{
             prestadores: req.body.prestadores
         });
 
-        emailService.send(
+       let sendEmail = await emailService.send(
             req.body.email,
             'Bem-vindo ao Salvus Teste da 2ª Etapa',
              global.EMAIL_TMPL.replace('{0}', req.body.nome)
         );
         res.status(200).send({
-            message: 'Médico cadastrado com sucesso'
+            message: 'Médico cadastrado com sucesso'+sendEmail
         });
     }catch(erro)
     {
         res.status(500).send({
-            message: 'Falha ao processar sua requisição'
+            message: 'Falha ao processar sua requisição'+erro
         });
 
     }

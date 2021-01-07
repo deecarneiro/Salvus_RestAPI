@@ -5,14 +5,14 @@ const config = require('./config');
 
 const app = express();
 
-mongoose.connect(config.connectionString);
+mongoose.connect(config.connectionString, {useNewUrlParser: true});
 
 const Patient = require('./models/patient');
 const Doctor = require('./models/doctor');
 
 
 const indexRoutes = require('./routes/index-route');
-const patientsRoutes = require('./routes/patients-route');
+const patientsRoutes = require('./routes/patient-route');
 const doctorsRoutes = require('./routes/doctor-route');
 
 app.use(bodyParser.json());
