@@ -10,9 +10,7 @@ exports.get =  async(req, res, next) =>{
 
 exports.getById = async(id) =>{
     const result = await Patient
-    .find({
-        _id: id
-    });
+    .findById(id)
     return result;
 };
 

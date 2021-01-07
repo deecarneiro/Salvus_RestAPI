@@ -1,13 +1,24 @@
-'use strict';
+'use strict'
 
-const config = require('../config');
-const sendgrid = require('sendgrid')(config.sendgrid);
+const config = require('../config')
+const sgMail = require('@sendgrid/mail')
 
-exports.send = async(to, subject, body) =>{
-    sendgrid.send({
-        to: to,
-        from: 'deecarneiro@testesalvus.me',
-        subject: subject,
-        body: body
-    });
-};
+sgMail.setApiKey(config.sendgridKey)
+
+exports.send = async (to, subject, body) => {
+  const msg = {
+    to: to, // Change to your recipient
+    from: 'deysedayane.o.c@gmail.com', // Change to your verified sender
+    subject: subject,
+    text: body,
+    html: `<strong>${body}</strong>, seja bem vindo ao teste da 2ª Etapa da Salvus`
+  }
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log('Email sent')
+    })
+    .catch(error => {
+      console.error(error)
+    })
+}

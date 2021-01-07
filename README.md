@@ -23,7 +23,7 @@ As dependências necessárias foram:
 
 A API conta com as seguintes features(funcionalidades):
  <ul>
- <li>.Cadastro de Paciente </li>
+ <li>Cadastro de Paciente </li>
  <li>Cadastro de Médico</li>
  <li>Lista de Pacientes</li>
  <li>Lista de Médicos</li>

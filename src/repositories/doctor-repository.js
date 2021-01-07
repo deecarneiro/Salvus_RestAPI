@@ -12,9 +12,7 @@ exports.get =  async(req, res, next) =>{
 
 exports.getById = async(id) =>{
     const result = await Doctor
-    .find({
-        _id: id
-    });
+    .findById(id);
     return result;
 };
 
@@ -40,6 +38,7 @@ exports.put = async(id, data) =>{
             email: data.email,  
             telefone : data.telefone,
             status: data.status,
+            rua: data.rua,
             cep: data.cep,
             complemento: data.complemento,
             bairro: data.bairro,

@@ -1,9 +1,9 @@
 'use strict';
 
-const repository = require('../repositories/pacient-repository');
+const repository = require('../repositories/patient-repository');
 const md5 = require('md5');
 const emailService = require('../services/email-service');
-
+const authService = require('../services/auth-service');
 
 exports.get =  async(req, res, next) =>{
     try
@@ -19,17 +19,16 @@ exports.get =  async(req, res, next) =>{
 };
 
 exports.getById = async(req, res, next) =>{
-    try
-    {   var data = repository.getById(req.params.id);
-        res.status(200).send(data);
-    }catch(erro)
-    {
+    try{
+        var data = await repository.getById(req.params.id)
+            res.status(200).send(data);
+    } catch (e){
         res.status(500).send({
             message: 'Falha ao processar sua requisição'
         });
     };
-    
-};
+
+}
 
 exports.post = async(req, res, next) =>{
 
@@ -83,7 +82,7 @@ exports.authenticate = async(req, res, next)=>{
             });
             return;
        }
-       const token = authService.generateToken(
+       const token  =  await authService.generateToken(
             {email: patient.email,
              nome: patient.nome
             }
@@ -99,7 +98,7 @@ exports.authenticate = async(req, res, next)=>{
     }catch(erro)
     {
         res.status(500).send({
-            message: 'Falha ao processar sua requisição'
+            message: 'Falha ao processar sua requisição'+erro
         });
 
     }
