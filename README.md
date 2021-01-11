@@ -19,6 +19,7 @@ As dependências necessárias foram:
  <li>MD5</li>
  <li>Mongoose</li>
  <li>Sendgrid</li>
+ <li>DotEnv</li>
 </ul>
 
 A API conta com as seguintes features(funcionalidades):
